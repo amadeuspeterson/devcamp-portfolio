@@ -8,7 +8,7 @@ class PortfoliosController < ApplicationController
   end
   
   def create
-    @portfolio_item = Portfolio.new(params.require(:blog).permit(:title, :subtitle, :body))
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
 
     respond_to do |format|
       if @portfolio_item.save
@@ -18,5 +18,9 @@ class PortfoliosController < ApplicationController
       end
     end
   end
-  
+
+  def edit
+    @portfolio_item = Porfolio.find(params[:id])
+  end
+
 end
