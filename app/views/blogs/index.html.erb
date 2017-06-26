@@ -1,20 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Blogs</h2>
+<h1>Blogs</h1>
 
-<hr>
-
-  <div>
+<table>
+  <thead>
+    <tr>
+      <th>Blog Title</th>
+      <th>Body</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+  
+   <tbody>
     <% @blogs.each do |blog| %>
-      <div>
-        <p><%= blog.title %></p>
-        <p><%= blog.body %></p>
-        <p><%= link_to 'Show', blog %></p>
-        <p><%= link_to 'Edit', edit_blog_path(blog) %></p>
-        <p><%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-      </div>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.body %></td>
+        <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
+        <td><%= link_to 'Show', blog %></td>
+        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+        <td><%= link_to 'Delete', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
     <% end %>
-  </div>
+  </tbody>
+</table>
 
 <br>
 
