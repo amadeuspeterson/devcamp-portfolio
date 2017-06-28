@@ -14,7 +14,3 @@ class Portfolio < ApplicationRecord
     self.thumb_image ||= "http://placehold.it/350x200"
   end
 end
-
-if self.main_image == nil
-  self.main_image = "http://placehold.it/600x400"
-end
