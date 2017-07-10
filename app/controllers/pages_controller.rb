@@ -4,6 +4,10 @@ class PagesController < ApplicationController
     @skills = Skill.all
   end
 
+  def
+    set_page_defaults
+  end
+  
   def about
   end
 
