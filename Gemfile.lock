@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/amadeuspeterson/peterson_view_tool
-  revision: 35b92e2fbc2bef1432982cee0e166f93f34499c0
+  revision: 66745291316383418d5ba2f3a8456c019ac0d817
   specs:
     peterson_view_tool (0.1.0)
 
