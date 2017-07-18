@@ -15,4 +15,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
+  
+  def copyright_generator
+    PetersonViewTool::Renderer.copyright 'Amadeus Peterson', 'All rights reserved'
+  end
 end
