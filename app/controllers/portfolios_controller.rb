@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
+  before_action :set_portfolio_item, only: [:edit, :show, :update, :destroy]
   layout 'portfolio'
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
   
@@ -29,7 +29,6 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    3.times { @portfolio_item.technologies.build }
   end
 
   def update
