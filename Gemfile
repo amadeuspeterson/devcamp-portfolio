@@ -61,3 +61,4 @@ gem 'peterson_view_tool', git: 'https://github.com/amadeuspeterson/peterson_view
 gem 'petergate', '~> 1.7', '>= 1.7.5'
 gem "font-awesome-rails"
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
